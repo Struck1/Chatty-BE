@@ -10,8 +10,7 @@ export default () => {
 			.connect(`${config.DATABASE_URL}`)
 			.then(() => {
 				log.info('Successfully connected to database');
-			})
-			.catch((e) => {
+			}).catch((e) => {
 				log.error('Error connected to database');
 				return process.exit(1);
 			});
